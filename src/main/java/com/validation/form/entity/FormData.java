@@ -24,13 +24,13 @@ public class FormData {
 	private String email;
 	
 	@Column(name = "phone_number")
-	private Integer phoneNumber;
+	private String phoneNumber;
 	
 	@Column(name = "company_name")
 	private String CompanyName;
 	
 	@Column(name = "postal_code")
-	private Integer postalCode;
+	private String postalCode;
 
 	public Long getId() {
 		return id;
@@ -64,11 +64,11 @@ public class FormData {
 		this.email = email;
 	}
 
-	public Integer getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(Integer phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
@@ -80,11 +80,11 @@ public class FormData {
 		CompanyName = companyName;
 	}
 
-	public Integer getPostalCode() {
+	public String getPostalCode() {
 		return postalCode;
 	}
 
-	public void setPostalCode(Integer postalCode) {
+	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
 }
