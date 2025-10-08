@@ -1,8 +1,8 @@
 package com.validation.form.controller;
 
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,12 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.validation.form.entity.FormData;
 import com.validation.form.service.FormService;
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 @RestController
 @RequestMapping("/api/form")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 public class FormController {
-	  private static final Logger logger = LoggerFactory.getLogger(FormController.class);
+//	  private static final Logger logger = LoggerFactory.getLogger(FormController.class);
 	@Autowired
 	private FormService formService;
 
@@ -39,4 +41,10 @@ public class FormController {
 	                .body("Something went wrong. Please try again.");
 	    }
 	}
+	
+	@GetMapping("/hello")
+	public String getMethodName() {
+		return "Application Working Fine😁";
+	}
+	
 }
